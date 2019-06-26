@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        arr = [5,8,6,4,2,7];
+        console.log(arr);
+        for (i=0;i<Math.floor(arr.length/2);i++){
+            arr[i] = arr[i]^arr[arr.length-1-i];
+            arr[arr.length-1-i]=arr[i]^arr[arr.length-1-i];
+            arr[i]=arr[i]^arr[arr.length-1-i];
+            
+        }
+        console.log(arr);
+    </script>
+    <script>
+        // 在原来数组上进行修改
+        function back(){
+            for (i=0;i<Math.floor(arguments.length/2);i++){
+            arguments[i]                   =arguments[i]^arguments[arguments.length-1-i];
+            arguments[arguments.length-1-i]=arguments[i]^arguments[arguments.length-1-i];
+            arguments[i]                   =arguments[i]^arguments[arguments.length-1-i];
+            
+        }
+        return arguments;
+        }
+        console.log(back(5,8,4,3,6,9,7,15));
+    </script>
+
+    <script>
+        // 新数组转载，利用temp.length进行转载
+        function bk(){
+            var arr = arguments;
+            temp = [];
+            for (i = arr.length-1;i>=0;i--){
+                temp[temp.length] = arr[i];
+            }
+            return temp;
+
+        }
+        console.log(bk(5,8,6,7,4,1,2,3));
+    </script>
+</body>
+</html>

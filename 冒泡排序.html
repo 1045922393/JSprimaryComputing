@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 从大到小排序
+        arr = [5,8,4,3,69,7,4];
+        for (var i = 0;i<arr.length;i++){
+            for (var j=i+1;j<arr.length;j++){
+                if(arr[j]>arr[i]){
+                    arr[i] = arr[i]^arr[j];
+                    arr[j] = arr[i]^arr[j];
+                    arr[i] = arr[i]^arr[j];
+                }
+            }
+        }
+        console.log(arr);
+    
+    </script>
+    <script>
+        // 从小到大排序
+         arr = [5,8,4,3,69,7,4];
+        for (var i = 0;i<arr.length;i++){
+            for (var j=i+1;j<arr.length;j++){
+                if(arr[j]<arr[i]){
+                    arr[i] = arr[i]^arr[j];
+                    arr[j] = arr[i]^arr[j];
+                    arr[i] = arr[i]^arr[j];
+                }
+            }
+        }
+        console.log(arr);
+    </script>
+    <script>
+        // 从大到小排序
+        function bts() {
+            var arr = arguments;
+            for (var i = 0;i<arr.length;i++){
+                for (var j=i+1;j<arr.length;j++){
+                    if(arr[j]>arr[i]){
+                        arr[i] = arr[i]^arr[j];
+                        arr[j] = arr[i]^arr[j];
+                        arr[i] = arr[i]^arr[j];
+                    }
+                }
+            }
+            return arr;
+        }
+        console.log(bts(5,8,4,3,69,7,4));
+    </script>
+    <script>
+        // 从小到大排序
+        function stb() {
+            var arr = arguments;
+            for (var i = 0;i<arr.length;i++){
+                for (var j=i+1;j<arr.length;j++){
+                    if(arr[j]<arr[i]){
+                        arr[i] = arr[i]^arr[j];
+                        arr[j] = arr[i]^arr[j];
+                        arr[i] = arr[i]^arr[j];
+                    }
+                }
+            }
+            return arr;
+        }
+        console.log(stb(5,8,4,3,69,7,4));
+    </script>
+</body>
+</html>

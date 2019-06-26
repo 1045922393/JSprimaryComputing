@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>阶乘</title>
+</head>
+<body>
+    <script>
+        var n =6;
+        theResult = 1;
+        for (i = 1;i<=n; i++){
+            theResult= theResult*i;
+        }
+        console.log(theResult);
+    </script>
+    <script>
+        function Jie(n){
+            var result = 1;
+            for(i=1;i<=n;i++){
+                result= result*i;
+            }
+            return result;
+        }
+        console.log(Jie(parseInt(prompt('请输入一个正整数，你会得到一个对应的阶乘结果'))));
+    </script>
+</body>
+</html>

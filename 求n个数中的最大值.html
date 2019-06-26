@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            // 两个数的最大值
+            function getMax(a,b){
+                var max =a>b?a:b;
+                return max; 
+            }
+            console.log(getMax(9,7));
+            // 三个数的最大值
+            function getMax1(a,b,c){
+                var max = getMax(a,b);
+                max = getMax(max,c);
+                return max;
+            }
+            console.log(getMax1(15,18,21));
+            function getMax2(){
+                var max = arguments[0];
+                for(i=1;i<arguments.length;i++){
+                    max = getMax(max,arguments[i]);
+                    
+                }
+                return max;
+            }
+            console.log(getMax2(5,941,14,1888,2,6545445,4555));
+    </script>
+</body>
+</html>
